@@ -15,8 +15,8 @@ message(FATAL_ERROR
 endif()
 
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -DDEBUG")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c++11 -D_LITTLE_ENDIAN -DNO_BZIP2" )
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -D_LITTLE_ENDIAN -DNO_BZIP2")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D_LITTLE_ENDIAN -DNO_BZIP2" )
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_LITTLE_ENDIAN -DNO_BZIP2")
 
 include_directories(${boost_root} )
 file(GLOB lib_srcs ${boost_root}/libs/system/src/*.cpp)
