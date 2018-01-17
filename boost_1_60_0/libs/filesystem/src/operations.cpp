@@ -11,6 +11,7 @@
 //--------------------------------------------------------------------------------------// 
 
 //  define 64-bit offset macros BEFORE including boost/config.hpp (see ticket #5355) 
+#if !(defined(__ANDROID__) && __ANDROID_API__ < 21)
 #if !(defined(__HP_aCC) && defined(_ILP32) && !defined(_STATVFS_ACPP_PROBLEMS_FIXED))
 #define _FILE_OFFSET_BITS 64 // at worst, these defines may have no effect,
 #endif
@@ -27,6 +28,7 @@
       // systems as well.
 #else
 #define _FILE_OFFSET_BITS 64
+#endif
 #endif
 
 // define BOOST_FILESYSTEM_SOURCE so that <boost/filesystem/config.hpp> knows
